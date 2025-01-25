@@ -4,7 +4,7 @@ from base64 import urlsafe_b64encode
 import json
 
 url = str(input("Enter the URL e.g google.com:"))
-
+# if API no longer valid make account on virustotal, click profile then API keys and copy your key and paste in between the quotes eg .Virustotal("yourapi")
 with virustotal_python.Virustotal("c81f8100d1b0ccd6f72a0a43aa15916b7d1866b5c53f65298d9e931dc637a393") as vtotal:
     try:
         resp = vtotal.request("urls", data={"url": url}, method="POST")
